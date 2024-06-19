@@ -1,12 +1,11 @@
 {
-  "name": "data-and-variables-exercises",
+  "name": "exercises",
   "version": "1.0.0",
-  "description": "A project to perform space mission calculations",
   "main": "data-and-variables-exercises.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "description": ""
 }
