@@ -21,7 +21,6 @@ console.log(result); // Prints 'JS'
 //Part Three section Two
 
 //1. Use the string methods you know to print 'Title Case' from the string 'title case'.
-
 let notTitleCase = 'title case';
 let titleCase = notTitleCase.split(' ')
     .map(word => word.charAt(0).toUpperCase() + word.slice(1))
