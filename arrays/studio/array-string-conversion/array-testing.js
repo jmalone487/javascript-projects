@@ -8,9 +8,13 @@ strings = [protoArray1, protoArray2, protoArray3, protoArray4];
 //2) 
 function reverseCommas() {
 	//TODO: 1. create and instantiate your variables.
-	let check;
+	let check = protoArray1;
 	let output;
 	//TODO: 2. write the code required for this step
+	let array = check.split(',');
+	array.reverse();
+	output = array.join(',');
+
 
 	//NOTE: For the code to run properly, you must return your output.  this needs to be the final line of code within the function's { }.
 	return output;
@@ -20,9 +24,9 @@ function reverseCommas() {
 function semiDash() {
 	let check;
 	let output;
-//TODO: write the code required for this step
-
-  
+	//TODO: write the code required for this step
+	output = check.replace(/;/g, '-');
+	// return your output
 	return output;
 }
 
@@ -30,8 +34,10 @@ function semiDash() {
 function reverseSpaces() {
 	let check;
 	let output;
-  //TODO: write the code required for this step
-
+	//TODO: write the code required for this step
+	let array = check.split(' ');
+	array.reverse();
+	output = array.join(' ');
 	return output;
 }
 
@@ -40,15 +46,15 @@ function commaSpace() {
 	let check;
 	let output;
 	//TODO: write the code required for this step
-  
+	output = check.replace(/,\s/g, '-');
 	return output;
 }
 
 // NOTE: Don't add or modify any code below this line or your program might not run as expected.
 module.exports = {
-	strings : strings, 
-	reverseCommas : reverseCommas,
-	semiDash: semiDash, 
-	reverseSpaces : reverseSpaces,
-	commaSpace : commaSpace
+	strings: strings,
+	reverseCommas: reverseCommas,
+	semiDash: semiDash,
+	reverseSpaces: reverseSpaces,
+	commaSpace: commaSpace
 };
