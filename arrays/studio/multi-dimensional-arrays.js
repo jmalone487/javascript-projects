@@ -1,3 +1,5 @@
+const input = require('readline-sync');
+
 let food = "water bottles,meal packs,snacks,chocolate";
 let equipment = "space suits,jet packs,tool belts,thermal detonators";
 let pets = "parrots,cats,moose,alien eggs";
