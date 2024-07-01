@@ -1,0 +1,67 @@
+function makeLine(size, char = '#') {
+    return char.repeat(size);
+}
+
+function makeSquare(size, char = '#') {
+    return makeRectangle(size, size, char);
+}
+
+function makeRectangle(width, height, char = '#') {
+    let rectangle = '';
+    for (let i = 0; i < height; i++) {
+        rectangle += makeLine(width, char);
+        if (i < height - 1) {
+            rectangle += '\n';
+        }
+    }
+    return rectangle;
+}
+
+function makeDownwardStairs(height, char = '#') {
+    let stairs = '';
+    for (let i = 1; i <= height; i++) {
+        stairs += makeLine(i, char);
+        if (i < height) {
+            stairs += '\n';
+        }
+    }
+    return stairs;
+}
+
+function makeSpaceLine(numSpaces, numChars, char = '#') {
+    let spaces = ' '.repeat(numSpaces);
+    let hashes = char.repeat(numChars);
+    return spaces + hashes + spaces;
+}
+
+function makeIsoscelesTriangle(height, char = '#') {
+    let triangle = '';
+    for (let i = 0; i < height; i++) {
+        let spaces = ' '.repeat(height - i - 1);
+        let hashes = char.repeat(2 * i + 1);
+        triangle += spaces + hashes + spaces;
+        if (i < height - 1) {
+            triangle += '\n';
+        }
+    }
+    return triangle;
+}
+
+function makeDiamond(height, char = '#') {
+    let diamond = makeIsoscelesTriangle(height, char);
+    for (let i = height - 2; i >= 0; i--) {
+        let spaces = ' '.repeat(height - i - 1);
+        let hashes = char.repeat(2 * i + 1);
+        diamond += '\n' + spaces + hashes + spaces;
+    }
+    return diamond;
+}
+
+// Testing the functions
+console.log(makeLine(5));
+console.log(makeSquare(5));
+console.log(makeRectangle(5, 3));
+console.log(makeDownwardStairs(5));
+console.log(makeSpaceLine(3, 5));
+console.log(makeIsoscelesTriangle(5));
+console.log(makeDiamond(5));
