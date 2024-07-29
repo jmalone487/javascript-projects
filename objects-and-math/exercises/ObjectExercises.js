@@ -87,4 +87,3 @@ let testResults = fitnessTest(crew);
 for (let result of testResults) {
    console.log(result);
 }
-
