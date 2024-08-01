@@ -1,12 +1,11 @@
 // Write a function called 'divide' that takes two parameters: a numerator and a denominator.
 function divide(numerator, denominator) {
-
-    // Your function should return the result of numerator / denominator.
+    // Check if the denominator is zero
     if (denominator === 0) {
-
-        // However, if the denominator is zero you should throw the error, "Attempted to divide by zero."
+        // Throw an error with the specified message if the denominator is zero
         throw new Error('Attempted to divide by zero.');
     }
-    // Code your divide function here:
+
+    // Return the result of the division
     return numerator / denominator;
 }

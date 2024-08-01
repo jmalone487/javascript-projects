@@ -4,9 +4,13 @@ function gradeLabs(labs) {
     let result;
 
     try {
+      // Attempt to call the runLab function
       result = lab.runLab(3);
+
+      // Check if the result is as expected
       console.log(`${lab.student} code worked: ${result === 27}`);
     } catch (error) {
+      // If an error occurs, set result to "Error thrown" and log it
       result = "Error thrown";
       console.log(`${lab.student} code worked: ${result}`);
     }
@@ -49,5 +53,6 @@ let studentLabs2 = [
   }
 ];
 
-gradeLabs(studentLabs);
-gradeLabs(studentLabs2);
+gradeLabs(studentLabs);   // Testing with valid runLab methods
+gradeLabs(studentLabs2);  // Testing with missing runLab method
+
